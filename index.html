@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Contest</title>
+    <!-- Style file link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CDN link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+    <!-- Header Section start -->
+    <section class="header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand d-lg-none" href="#">Company Name</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-primary" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-primary">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-primary">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-primary">Contact Us</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-primary" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </section>
+      <!-- Header Section end -->
+  
+      <!-- Home Section start -->
+      <section class="home-carasoul">
+        <div class="container-fluid">
+          <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button"data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button"data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button"data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4 "></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="data:image/jpeg;base64,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" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>
+                    Some representative placeholder content for the first slide.
+                  </p>
+                </div>
+              </div><!-- -->
+              <div class="carousel-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6VqepZpsBKQRLiX-ZTumal_CxcmGTORKdnA&usqp=CAU" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>
+                    Some representative placeholder content for the second slide.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>
+                    Some representative placeholder content for the third slide.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.pexels.com/photos/1064144/pexels-photo-1064144.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Fourth slide label</h5>
+                  <p>
+                    Some representative placeholder content for the fourth slide.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Home Section end -->
+  
+       <!-- Cards Section start -->
+    <section class="cards my-4">
+      <div class="container-fluid">
+          <div class="d-flex flex-wrap justify-content-between">
+              <div class="card" style="width: 32%;">
+                  <div class="card-header">
+                      Card Header
+                    </div>
+                  <img src="https://images.pexels.com/photos/1005472/pexels-photo-1005472.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card Title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">1st list item</li>
+                    <li class="list-group-item">2nd list item</li>
+                  </ul>
+                  <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                  </div>
+                  <div class="card-footer text-muted">
+                      Card Footer
+                  </div>
+              </div>
+              <div class="card" style="width: 32%;">
+                  <div class="card-header">
+                      Card Header
+                    </div>
+                  <img src="https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card Title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">1st list item</li>
+                    <li class="list-group-item">2nd list item</li>
+                  </ul>
+                  <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                  </div>
+                  <div class="card-footer text-muted">
+                      Card Footer
+                  </div>
+              </div>
+              <div class="card" style="width: 32%;">
+                  <div class="card-header">
+                      Card Header
+                    </div>
+                  <img src="https://images.pexels.com/photos/709552/pexels-photo-709552.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card Title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">1st list item</li>
+                    <li class="list-group-item">2nd list item</li>
+                  </ul>
+                  <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                  </div>
+                  <div class="card-footer text-muted">
+                      Card Footer
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- Cards Section end -->
+
+  <!-- Accordian Section Start -->
+  <section class="accordian">
+      <div class="container-fluid">
+          <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      Accordion Item 
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>This is the first item's accordion body.</strong> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                      terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                      skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                      Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                      single-origin coffee nulla assumenda shoreditch et. Nihil anim
+                      keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                      sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                      occaecat craft beer farm-to-table, raw denim aesthetic synth
+                      nesciunt you probably haven't heard of them accusamus labore
+                      sustainable VHS.
+                    </div>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Accordion Item 
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the second item's accordion body.</strong> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                    terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                    Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                    single-origin coffee nulla assumenda shoreditch et. Nihil anim
+                    keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                    occaecat craft beer farm-to-table, raw denim aesthetic synth
+                    nesciunt you probably haven't heard of them accusamus labore
+                    sustainable VHS.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Accordion Item 
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                    terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                    Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                    single-origin coffee nulla assumenda shoreditch et. Nihil anim
+                    keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                    occaecat craft beer farm-to-table, raw denim aesthetic synth
+                    nesciunt you probably haven't heard of them accusamus labore
+                    sustainable VHS.
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+  </section>
+  <!-- Accordian Section end -->
+<br>
+  <!-- Table Section Start -->
+  <div class="container-fluid">
+    <table class="table table-hover h-25">
+        <thead>
+          <tr>
+            <th scope="col" class="col-auto"><input type="checkbox"></th>
+            <th scope="col" class="col-auto">Title</th>
+            <th scope="col" class="col-3">Title</th>
+            <th scope="col" class="col-3">Title</th>
+            <th scope="col" class="col-3">Title</th>
+            <th scope="col" class="col-3">Title</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><input type="checkbox"></th>
+            <td><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1695_36498)">
+                <rect width="16" height="16" fill="white" fill-opacity="0.01"/>
+                <path d="M6.99966 1.99915C6.99966 2.26436 6.89431 2.51872 6.70677 2.70625C6.51923 2.89379 6.26488 2.99915 5.99966 2.99915C5.73445 2.99915 5.48009 2.89379 5.29256 2.70625C5.10502 2.51872 4.99966 2.26436 4.99966 1.99915C4.99966 1.73393 5.10502 1.47958 5.29256 1.29204C5.48009 1.1045 5.73445 0.999146 5.99966 0.999146C6.26488 0.999146 6.51923 1.1045 6.70677 1.29204C6.89431 1.47958 6.99966 1.73393 6.99966 1.99915ZM9.99966 1.99915C9.99966 2.26436 9.89431 2.51872 9.70677 2.70625C9.51923 2.89379 9.26488 2.99915 8.99966 2.99915C8.73445 2.99915 8.48009 2.89379 8.29256 2.70625C8.10502 2.51872 7.99966 2.26436 7.99966 1.99915C7.99966 1.73393 8.10502 1.47958 8.29256 1.29204C8.48009 1.1045 8.73445 0.999146 8.99966 0.999146C9.26488 0.999146 9.51923 1.1045 9.70677 1.29204C9.89431 1.47958 9.99966 1.73393 9.99966 1.99915ZM6.99966 4.99915C6.99966 5.26436 6.89431 5.51872 6.70677 5.70625C6.51923 5.89379 6.26488 5.99915 5.99966 5.99915C5.73445 5.99915 5.48009 5.89379 5.29256 5.70625C5.10502 5.51872 4.99966 5.26436 4.99966 4.99915C4.99966 4.73393 5.10502 4.47958 5.29256 4.29204C5.48009 4.1045 5.73445 3.99915 5.99966 3.99915C6.26488 3.99915 6.51923 4.1045 6.70677 4.29204C6.89431 4.47958 6.99966 4.73393 6.99966 4.99915ZM9.99966 4.99915C9.99966 5.26436 9.89431 5.51872 9.70677 5.70625C9.51923 5.89379 9.26488 5.99915 8.99966 5.99915C8.73445 5.99915 8.48009 5.89379 8.29256 5.70625C8.10502 5.51872 7.99966 5.26436 7.99966 4.99915C7.99966 4.73393 8.10502 4.47958 8.29256 4.29204C8.48009 4.1045 8.73445 3.99915 8.99966 3.99915C9.26488 3.99915 9.51923 4.1045 9.70677 4.29204C9.89431 4.47958 9.99966 4.73393 9.99966 4.99915ZM6.99966 7.99915C6.99966 8.26436 6.89431 8.51872 6.70677 8.70625C6.51923 8.89379 6.26488 8.99915 5.99966 8.99915C5.73445 8.99915 5.48009 8.89379 5.29256 8.70625C5.10502 8.51872 4.99966 8.26436 4.99966 7.99915C4.99966 7.73393 5.10502 7.47958 5.29256 7.29204C5.48009 7.1045 5.73445 6.99915 5.99966 6.99915C6.26488 6.99915 6.51923 7.1045 6.70677 7.29204C6.89431 7.47958 6.99966 7.73393 6.99966 7.99915ZM9.99966 7.99915C9.99966 8.26436 9.89431 8.51872 9.70677 8.70625C9.51923 8.89379 9.26488 8.99915 8.99966 8.99915C8.73445 8.99915 8.48009 8.89379 8.29256 8.70625C8.10502 8.51872 7.99966 8.26436 7.99966 7.99915C7.99966 7.73393 8.10502 7.47958 8.29256 7.29204C8.48009 7.1045 8.73445 6.99915 8.99966 6.99915C9.26488 6.99915 9.51923 7.1045 9.70677 7.29204C9.89431 7.47958 9.99966 7.73393 9.99966 7.99915ZM6.99966 10.9991C6.99966 11.2644 6.89431 11.5187 6.70677 11.7063C6.51923 11.8938 6.26488 11.9991 5.99966 11.9991C5.73445 11.9991 5.48009 11.8938 5.29256 11.7063C5.10502 11.5187 4.99966 11.2644 4.99966 10.9991C4.99966 10.7339 5.10502 10.4796 5.29256 10.292C5.48009 10.1045 5.73445 9.99915 5.99966 9.99915C6.26488 9.99915 6.51923 10.1045 6.70677 10.292C6.89431 10.4796 6.99966 10.7339 6.99966 10.9991ZM9.99966 10.9991C9.99966 11.2644 9.89431 11.5187 9.70677 11.7063C9.51923 11.8938 9.26488 11.9991 8.99966 11.9991C8.73445 11.9991 8.48009 11.8938 8.29256 11.7063C8.10502 11.5187 7.99966 11.2644 7.99966 10.9991C7.99966 10.7339 8.10502 10.4796 8.29256 10.292C8.48009 10.1045 8.73445 9.99915 8.99966 9.99915C9.26488 9.99915 9.51923 10.1045 9.70677 10.292C9.89431 10.4796 9.99966 10.7339 9.99966 10.9991ZM6.99966 13.9991C6.99966 14.2644 6.89431 14.5187 6.70677 14.7063C6.51923 14.8938 6.26488 14.9991 5.99966 14.9991C5.73445 14.9991 5.48009 14.8938 5.29256 14.7063C5.10502 14.5187 4.99966 14.2644 4.99966 13.9991C4.99966 13.7339 5.10502 13.4796 5.29256 13.292C5.48009 13.1045 5.73445 12.9991 5.99966 12.9991C6.26488 12.9991 6.51923 13.1045 6.70677 13.292C6.89431 13.4796 6.99966 13.7339 6.99966 13.9991ZM9.99966 13.9991C9.99966 14.2644 9.89431 14.5187 9.70677 14.7063C9.51923 14.8938 9.26488 14.9991 8.99966 14.9991C8.73445 14.9991 8.48009 14.8938 8.29256 14.7063C8.10502 14.5187 7.99966 14.2644 7.99966 13.9991C7.99966 13.7339 8.10502 13.4796 8.29256 13.292C8.48009 13.1045 8.73445 12.9991 8.99966 12.9991C9.26488 12.9991 9.51923 13.1045 9.70677 13.292C9.89431 13.4796 9.99966 13.7339 9.99966 13.9991Z" fill="#6C757D"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_1695_36498">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg></td>
+            <td>Title</td>
+            <td>Title</td>
+            <td>Title</td>
+            <td class="d-flex text-primary">
+                <div class="mr-auto">Publish&nbsp;&nbsp;&nbsp;</div>
+                <div class="mr-auto">Edit&nbsp;&nbsp;&nbsp;</div>
+                <div class="mr-auto">Delete</div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><input type="checkbox"></th>
+            <td><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1695_36498)">
+                <rect width="16" height="16" fill="white" fill-opacity="0.01"/>
+                <path d="M6.99966 1.99915C6.99966 2.26436 6.89431 2.51872 6.70677 2.70625C6.51923 2.89379 6.26488 2.99915 5.99966 2.99915C5.73445 2.99915 5.48009 2.89379 5.29256 2.70625C5.10502 2.51872 4.99966 2.26436 4.99966 1.99915C4.99966 1.73393 5.10502 1.47958 5.29256 1.29204C5.48009 1.1045 5.73445 0.999146 5.99966 0.999146C6.26488 0.999146 6.51923 1.1045 6.70677 1.29204C6.89431 1.47958 6.99966 1.73393 6.99966 1.99915ZM9.99966 1.99915C9.99966 2.26436 9.89431 2.51872 9.70677 2.70625C9.51923 2.89379 9.26488 2.99915 8.99966 2.99915C8.73445 2.99915 8.48009 2.89379 8.29256 2.70625C8.10502 2.51872 7.99966 2.26436 7.99966 1.99915C7.99966 1.73393 8.10502 1.47958 8.29256 1.29204C8.48009 1.1045 8.73445 0.999146 8.99966 0.999146C9.26488 0.999146 9.51923 1.1045 9.70677 1.29204C9.89431 1.47958 9.99966 1.73393 9.99966 1.99915ZM6.99966 4.99915C6.99966 5.26436 6.89431 5.51872 6.70677 5.70625C6.51923 5.89379 6.26488 5.99915 5.99966 5.99915C5.73445 5.99915 5.48009 5.89379 5.29256 5.70625C5.10502 5.51872 4.99966 5.26436 4.99966 4.99915C4.99966 4.73393 5.10502 4.47958 5.29256 4.29204C5.48009 4.1045 5.73445 3.99915 5.99966 3.99915C6.26488 3.99915 6.51923 4.1045 6.70677 4.29204C6.89431 4.47958 6.99966 4.73393 6.99966 4.99915ZM9.99966 4.99915C9.99966 5.26436 9.89431 5.51872 9.70677 5.70625C9.51923 5.89379 9.26488 5.99915 8.99966 5.99915C8.73445 5.99915 8.48009 5.89379 8.29256 5.70625C8.10502 5.51872 7.99966 5.26436 7.99966 4.99915C7.99966 4.73393 8.10502 4.47958 8.29256 4.29204C8.48009 4.1045 8.73445 3.99915 8.99966 3.99915C9.26488 3.99915 9.51923 4.1045 9.70677 4.29204C9.89431 4.47958 9.99966 4.73393 9.99966 4.99915ZM6.99966 7.99915C6.99966 8.26436 6.89431 8.51872 6.70677 8.70625C6.51923 8.89379 6.26488 8.99915 5.99966 8.99915C5.73445 8.99915 5.48009 8.89379 5.29256 8.70625C5.10502 8.51872 4.99966 8.26436 4.99966 7.99915C4.99966 7.73393 5.10502 7.47958 5.29256 7.29204C5.48009 7.1045 5.73445 6.99915 5.99966 6.99915C6.26488 6.99915 6.51923 7.1045 6.70677 7.29204C6.89431 7.47958 6.99966 7.73393 6.99966 7.99915ZM9.99966 7.99915C9.99966 8.26436 9.89431 8.51872 9.70677 8.70625C9.51923 8.89379 9.26488 8.99915 8.99966 8.99915C8.73445 8.99915 8.48009 8.89379 8.29256 8.70625C8.10502 8.51872 7.99966 8.26436 7.99966 7.99915C7.99966 7.73393 8.10502 7.47958 8.29256 7.29204C8.48009 7.1045 8.73445 6.99915 8.99966 6.99915C9.26488 6.99915 9.51923 7.1045 9.70677 7.29204C9.89431 7.47958 9.99966 7.73393 9.99966 7.99915ZM6.99966 10.9991C6.99966 11.2644 6.89431 11.5187 6.70677 11.7063C6.51923 11.8938 6.26488 11.9991 5.99966 11.9991C5.73445 11.9991 5.48009 11.8938 5.29256 11.7063C5.10502 11.5187 4.99966 11.2644 4.99966 10.9991C4.99966 10.7339 5.10502 10.4796 5.29256 10.292C5.48009 10.1045 5.73445 9.99915 5.99966 9.99915C6.26488 9.99915 6.51923 10.1045 6.70677 10.292C6.89431 10.4796 6.99966 10.7339 6.99966 10.9991ZM9.99966 10.9991C9.99966 11.2644 9.89431 11.5187 9.70677 11.7063C9.51923 11.8938 9.26488 11.9991 8.99966 11.9991C8.73445 11.9991 8.48009 11.8938 8.29256 11.7063C8.10502 11.5187 7.99966 11.2644 7.99966 10.9991C7.99966 10.7339 8.10502 10.4796 8.29256 10.292C8.48009 10.1045 8.73445 9.99915 8.99966 9.99915C9.26488 9.99915 9.51923 10.1045 9.70677 10.292C9.89431 10.4796 9.99966 10.7339 9.99966 10.9991ZM6.99966 13.9991C6.99966 14.2644 6.89431 14.5187 6.70677 14.7063C6.51923 14.8938 6.26488 14.9991 5.99966 14.9991C5.73445 14.9991 5.48009 14.8938 5.29256 14.7063C5.10502 14.5187 4.99966 14.2644 4.99966 13.9991C4.99966 13.7339 5.10502 13.4796 5.29256 13.292C5.48009 13.1045 5.73445 12.9991 5.99966 12.9991C6.26488 12.9991 6.51923 13.1045 6.70677 13.292C6.89431 13.4796 6.99966 13.7339 6.99966 13.9991ZM9.99966 13.9991C9.99966 14.2644 9.89431 14.5187 9.70677 14.7063C9.51923 14.8938 9.26488 14.9991 8.99966 14.9991C8.73445 14.9991 8.48009 14.8938 8.29256 14.7063C8.10502 14.5187 7.99966 14.2644 7.99966 13.9991C7.99966 13.7339 8.10502 13.4796 8.29256 13.292C8.48009 13.1045 8.73445 12.9991 8.99966 12.9991C9.26488 12.9991 9.51923 13.1045 9.70677 13.292C9.89431 13.4796 9.99966 13.7339 9.99966 13.9991Z" fill="#6C757D"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_1695_36498">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg></td>
+            <td>Title</td>
+            <td>Title</td>
+            <td>Title</td>
+            <td class="d-flex text-primary">
+              <div class="mr-auto">Publish&nbsp;&nbsp;&nbsp;</div>
+              <div class="mr-auto">Edit&nbsp;&nbsp;&nbsp;</div>
+              <div class="mr-auto">Delete</div>
+          </td>
+          </tr>
+          <tr>
+            <th scope="row"><input type="checkbox"></th>
+            <td><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1695_36498)">
+                <rect width="16" height="16" fill="white" fill-opacity="0.01"/>
+                <path d="M6.99966 1.99915C6.99966 2.26436 6.89431 2.51872 6.70677 2.70625C6.51923 2.89379 6.26488 2.99915 5.99966 2.99915C5.73445 2.99915 5.48009 2.89379 5.29256 2.70625C5.10502 2.51872 4.99966 2.26436 4.99966 1.99915C4.99966 1.73393 5.10502 1.47958 5.29256 1.29204C5.48009 1.1045 5.73445 0.999146 5.99966 0.999146C6.26488 0.999146 6.51923 1.1045 6.70677 1.29204C6.89431 1.47958 6.99966 1.73393 6.99966 1.99915ZM9.99966 1.99915C9.99966 2.26436 9.89431 2.51872 9.70677 2.70625C9.51923 2.89379 9.26488 2.99915 8.99966 2.99915C8.73445 2.99915 8.48009 2.89379 8.29256 2.70625C8.10502 2.51872 7.99966 2.26436 7.99966 1.99915C7.99966 1.73393 8.10502 1.47958 8.29256 1.29204C8.48009 1.1045 8.73445 0.999146 8.99966 0.999146C9.26488 0.999146 9.51923 1.1045 9.70677 1.29204C9.89431 1.47958 9.99966 1.73393 9.99966 1.99915ZM6.99966 4.99915C6.99966 5.26436 6.89431 5.51872 6.70677 5.70625C6.51923 5.89379 6.26488 5.99915 5.99966 5.99915C5.73445 5.99915 5.48009 5.89379 5.29256 5.70625C5.10502 5.51872 4.99966 5.26436 4.99966 4.99915C4.99966 4.73393 5.10502 4.47958 5.29256 4.29204C5.48009 4.1045 5.73445 3.99915 5.99966 3.99915C6.26488 3.99915 6.51923 4.1045 6.70677 4.29204C6.89431 4.47958 6.99966 4.73393 6.99966 4.99915ZM9.99966 4.99915C9.99966 5.26436 9.89431 5.51872 9.70677 5.70625C9.51923 5.89379 9.26488 5.99915 8.99966 5.99915C8.73445 5.99915 8.48009 5.89379 8.29256 5.70625C8.10502 5.51872 7.99966 5.26436 7.99966 4.99915C7.99966 4.73393 8.10502 4.47958 8.29256 4.29204C8.48009 4.1045 8.73445 3.99915 8.99966 3.99915C9.26488 3.99915 9.51923 4.1045 9.70677 4.29204C9.89431 4.47958 9.99966 4.73393 9.99966 4.99915ZM6.99966 7.99915C6.99966 8.26436 6.89431 8.51872 6.70677 8.70625C6.51923 8.89379 6.26488 8.99915 5.99966 8.99915C5.73445 8.99915 5.48009 8.89379 5.29256 8.70625C5.10502 8.51872 4.99966 8.26436 4.99966 7.99915C4.99966 7.73393 5.10502 7.47958 5.29256 7.29204C5.48009 7.1045 5.73445 6.99915 5.99966 6.99915C6.26488 6.99915 6.51923 7.1045 6.70677 7.29204C6.89431 7.47958 6.99966 7.73393 6.99966 7.99915ZM9.99966 7.99915C9.99966 8.26436 9.89431 8.51872 9.70677 8.70625C9.51923 8.89379 9.26488 8.99915 8.99966 8.99915C8.73445 8.99915 8.48009 8.89379 8.29256 8.70625C8.10502 8.51872 7.99966 8.26436 7.99966 7.99915C7.99966 7.73393 8.10502 7.47958 8.29256 7.29204C8.48009 7.1045 8.73445 6.99915 8.99966 6.99915C9.26488 6.99915 9.51923 7.1045 9.70677 7.29204C9.89431 7.47958 9.99966 7.73393 9.99966 7.99915ZM6.99966 10.9991C6.99966 11.2644 6.89431 11.5187 6.70677 11.7063C6.51923 11.8938 6.26488 11.9991 5.99966 11.9991C5.73445 11.9991 5.48009 11.8938 5.29256 11.7063C5.10502 11.5187 4.99966 11.2644 4.99966 10.9991C4.99966 10.7339 5.10502 10.4796 5.29256 10.292C5.48009 10.1045 5.73445 9.99915 5.99966 9.99915C6.26488 9.99915 6.51923 10.1045 6.70677 10.292C6.89431 10.4796 6.99966 10.7339 6.99966 10.9991ZM9.99966 10.9991C9.99966 11.2644 9.89431 11.5187 9.70677 11.7063C9.51923 11.8938 9.26488 11.9991 8.99966 11.9991C8.73445 11.9991 8.48009 11.8938 8.29256 11.7063C8.10502 11.5187 7.99966 11.2644 7.99966 10.9991C7.99966 10.7339 8.10502 10.4796 8.29256 10.292C8.48009 10.1045 8.73445 9.99915 8.99966 9.99915C9.26488 9.99915 9.51923 10.1045 9.70677 10.292C9.89431 10.4796 9.99966 10.7339 9.99966 10.9991ZM6.99966 13.9991C6.99966 14.2644 6.89431 14.5187 6.70677 14.7063C6.51923 14.8938 6.26488 14.9991 5.99966 14.9991C5.73445 14.9991 5.48009 14.8938 5.29256 14.7063C5.10502 14.5187 4.99966 14.2644 4.99966 13.9991C4.99966 13.7339 5.10502 13.4796 5.29256 13.292C5.48009 13.1045 5.73445 12.9991 5.99966 12.9991C6.26488 12.9991 6.51923 13.1045 6.70677 13.292C6.89431 13.4796 6.99966 13.7339 6.99966 13.9991ZM9.99966 13.9991C9.99966 14.2644 9.89431 14.5187 9.70677 14.7063C9.51923 14.8938 9.26488 14.9991 8.99966 14.9991C8.73445 14.9991 8.48009 14.8938 8.29256 14.7063C8.10502 14.5187 7.99966 14.2644 7.99966 13.9991C7.99966 13.7339 8.10502 13.4796 8.29256 13.292C8.48009 13.1045 8.73445 12.9991 8.99966 12.9991C9.26488 12.9991 9.51923 13.1045 9.70677 13.292C9.89431 13.4796 9.99966 13.7339 9.99966 13.9991Z" fill="#6C757D"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_1695_36498">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg></td>
+            <td>Title</td>
+            <td>Title</td>
+            <td>Title</td>
+            <td class="d-flex text-primary">
+              <div class="mr-auto">Publish&nbsp;&nbsp;&nbsp;</div>
+              <div class="mr-auto">Edit&nbsp;&nbsp;&nbsp;</div>
+              <div class="mr-auto">Delete</div>
+          </td>
+          </tr>
+          <tr>
+            <th scope="row"><input type="checkbox"></th>
+            <td><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1695_36498)">
+                <rect width="16" height="16" fill="white" fill-opacity="0.01"/>
+                <path d="M6.99966 1.99915C6.99966 2.26436 6.89431 2.51872 6.70677 2.70625C6.51923 2.89379 6.26488 2.99915 5.99966 2.99915C5.73445 2.99915 5.48009 2.89379 5.29256 2.70625C5.10502 2.51872 4.99966 2.26436 4.99966 1.99915C4.99966 1.73393 5.10502 1.47958 5.29256 1.29204C5.48009 1.1045 5.73445 0.999146 5.99966 0.999146C6.26488 0.999146 6.51923 1.1045 6.70677 1.29204C6.89431 1.47958 6.99966 1.73393 6.99966 1.99915ZM9.99966 1.99915C9.99966 2.26436 9.89431 2.51872 9.70677 2.70625C9.51923 2.89379 9.26488 2.99915 8.99966 2.99915C8.73445 2.99915 8.48009 2.89379 8.29256 2.70625C8.10502 2.51872 7.99966 2.26436 7.99966 1.99915C7.99966 1.73393 8.10502 1.47958 8.29256 1.29204C8.48009 1.1045 8.73445 0.999146 8.99966 0.999146C9.26488 0.999146 9.51923 1.1045 9.70677 1.29204C9.89431 1.47958 9.99966 1.73393 9.99966 1.99915ZM6.99966 4.99915C6.99966 5.26436 6.89431 5.51872 6.70677 5.70625C6.51923 5.89379 6.26488 5.99915 5.99966 5.99915C5.73445 5.99915 5.48009 5.89379 5.29256 5.70625C5.10502 5.51872 4.99966 5.26436 4.99966 4.99915C4.99966 4.73393 5.10502 4.47958 5.29256 4.29204C5.48009 4.1045 5.73445 3.99915 5.99966 3.99915C6.26488 3.99915 6.51923 4.1045 6.70677 4.29204C6.89431 4.47958 6.99966 4.73393 6.99966 4.99915ZM9.99966 4.99915C9.99966 5.26436 9.89431 5.51872 9.70677 5.70625C9.51923 5.89379 9.26488 5.99915 8.99966 5.99915C8.73445 5.99915 8.48009 5.89379 8.29256 5.70625C8.10502 5.51872 7.99966 5.26436 7.99966 4.99915C7.99966 4.73393 8.10502 4.47958 8.29256 4.29204C8.48009 4.1045 8.73445 3.99915 8.99966 3.99915C9.26488 3.99915 9.51923 4.1045 9.70677 4.29204C9.89431 4.47958 9.99966 4.73393 9.99966 4.99915ZM6.99966 7.99915C6.99966 8.26436 6.89431 8.51872 6.70677 8.70625C6.51923 8.89379 6.26488 8.99915 5.99966 8.99915C5.73445 8.99915 5.48009 8.89379 5.29256 8.70625C5.10502 8.51872 4.99966 8.26436 4.99966 7.99915C4.99966 7.73393 5.10502 7.47958 5.29256 7.29204C5.48009 7.1045 5.73445 6.99915 5.99966 6.99915C6.26488 6.99915 6.51923 7.1045 6.70677 7.29204C6.89431 7.47958 6.99966 7.73393 6.99966 7.99915ZM9.99966 7.99915C9.99966 8.26436 9.89431 8.51872 9.70677 8.70625C9.51923 8.89379 9.26488 8.99915 8.99966 8.99915C8.73445 8.99915 8.48009 8.89379 8.29256 8.70625C8.10502 8.51872 7.99966 8.26436 7.99966 7.99915C7.99966 7.73393 8.10502 7.47958 8.29256 7.29204C8.48009 7.1045 8.73445 6.99915 8.99966 6.99915C9.26488 6.99915 9.51923 7.1045 9.70677 7.29204C9.89431 7.47958 9.99966 7.73393 9.99966 7.99915ZM6.99966 10.9991C6.99966 11.2644 6.89431 11.5187 6.70677 11.7063C6.51923 11.8938 6.26488 11.9991 5.99966 11.9991C5.73445 11.9991 5.48009 11.8938 5.29256 11.7063C5.10502 11.5187 4.99966 11.2644 4.99966 10.9991C4.99966 10.7339 5.10502 10.4796 5.29256 10.292C5.48009 10.1045 5.73445 9.99915 5.99966 9.99915C6.26488 9.99915 6.51923 10.1045 6.70677 10.292C6.89431 10.4796 6.99966 10.7339 6.99966 10.9991ZM9.99966 10.9991C9.99966 11.2644 9.89431 11.5187 9.70677 11.7063C9.51923 11.8938 9.26488 11.9991 8.99966 11.9991C8.73445 11.9991 8.48009 11.8938 8.29256 11.7063C8.10502 11.5187 7.99966 11.2644 7.99966 10.9991C7.99966 10.7339 8.10502 10.4796 8.29256 10.292C8.48009 10.1045 8.73445 9.99915 8.99966 9.99915C9.26488 9.99915 9.51923 10.1045 9.70677 10.292C9.89431 10.4796 9.99966 10.7339 9.99966 10.9991ZM6.99966 13.9991C6.99966 14.2644 6.89431 14.5187 6.70677 14.7063C6.51923 14.8938 6.26488 14.9991 5.99966 14.9991C5.73445 14.9991 5.48009 14.8938 5.29256 14.7063C5.10502 14.5187 4.99966 14.2644 4.99966 13.9991C4.99966 13.7339 5.10502 13.4796 5.29256 13.292C5.48009 13.1045 5.73445 12.9991 5.99966 12.9991C6.26488 12.9991 6.51923 13.1045 6.70677 13.292C6.89431 13.4796 6.99966 13.7339 6.99966 13.9991ZM9.99966 13.9991C9.99966 14.2644 9.89431 14.5187 9.70677 14.7063C9.51923 14.8938 9.26488 14.9991 8.99966 14.9991C8.73445 14.9991 8.48009 14.8938 8.29256 14.7063C8.10502 14.5187 7.99966 14.2644 7.99966 13.9991C7.99966 13.7339 8.10502 13.4796 8.29256 13.292C8.48009 13.1045 8.73445 12.9991 8.99966 12.9991C9.26488 12.9991 9.51923 13.1045 9.70677 13.292C9.89431 13.4796 9.99966 13.7339 9.99966 13.9991Z" fill="#6C757D"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_1695_36498">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg></td>
+            <td>Title</td>
+            <td>Title</td>
+            <td>Title</td>
+            <td class="d-flex text-primary">
+              <div class="mr-auto">Publish&nbsp;&nbsp;&nbsp;</div>
+              <div class="mr-auto">Edit&nbsp;&nbsp;&nbsp;</div>
+              <div class="mr-auto">Delete</div>
+          </td>
+          </tr>
+          <tr>
+            <th scope="row"><input type="checkbox"></th>
+            <td><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1695_36498)">
+                <rect width="16" height="16" fill="white" fill-opacity="0.01"/>
+                <path d="M6.99966 1.99915C6.99966 2.26436 6.89431 2.51872 6.70677 2.70625C6.51923 2.89379 6.26488 2.99915 5.99966 2.99915C5.73445 2.99915 5.48009 2.89379 5.29256 2.70625C5.10502 2.51872 4.99966 2.26436 4.99966 1.99915C4.99966 1.73393 5.10502 1.47958 5.29256 1.29204C5.48009 1.1045 5.73445 0.999146 5.99966 0.999146C6.26488 0.999146 6.51923 1.1045 6.70677 1.29204C6.89431 1.47958 6.99966 1.73393 6.99966 1.99915ZM9.99966 1.99915C9.99966 2.26436 9.89431 2.51872 9.70677 2.70625C9.51923 2.89379 9.26488 2.99915 8.99966 2.99915C8.73445 2.99915 8.48009 2.89379 8.29256 2.70625C8.10502 2.51872 7.99966 2.26436 7.99966 1.99915C7.99966 1.73393 8.10502 1.47958 8.29256 1.29204C8.48009 1.1045 8.73445 0.999146 8.99966 0.999146C9.26488 0.999146 9.51923 1.1045 9.70677 1.29204C9.89431 1.47958 9.99966 1.73393 9.99966 1.99915ZM6.99966 4.99915C6.99966 5.26436 6.89431 5.51872 6.70677 5.70625C6.51923 5.89379 6.26488 5.99915 5.99966 5.99915C5.73445 5.99915 5.48009 5.89379 5.29256 5.70625C5.10502 5.51872 4.99966 5.26436 4.99966 4.99915C4.99966 4.73393 5.10502 4.47958 5.29256 4.29204C5.48009 4.1045 5.73445 3.99915 5.99966 3.99915C6.26488 3.99915 6.51923 4.1045 6.70677 4.29204C6.89431 4.47958 6.99966 4.73393 6.99966 4.99915ZM9.99966 4.99915C9.99966 5.26436 9.89431 5.51872 9.70677 5.70625C9.51923 5.89379 9.26488 5.99915 8.99966 5.99915C8.73445 5.99915 8.48009 5.89379 8.29256 5.70625C8.10502 5.51872 7.99966 5.26436 7.99966 4.99915C7.99966 4.73393 8.10502 4.47958 8.29256 4.29204C8.48009 4.1045 8.73445 3.99915 8.99966 3.99915C9.26488 3.99915 9.51923 4.1045 9.70677 4.29204C9.89431 4.47958 9.99966 4.73393 9.99966 4.99915ZM6.99966 7.99915C6.99966 8.26436 6.89431 8.51872 6.70677 8.70625C6.51923 8.89379 6.26488 8.99915 5.99966 8.99915C5.73445 8.99915 5.48009 8.89379 5.29256 8.70625C5.10502 8.51872 4.99966 8.26436 4.99966 7.99915C4.99966 7.73393 5.10502 7.47958 5.29256 7.29204C5.48009 7.1045 5.73445 6.99915 5.99966 6.99915C6.26488 6.99915 6.51923 7.1045 6.70677 7.29204C6.89431 7.47958 6.99966 7.73393 6.99966 7.99915ZM9.99966 7.99915C9.99966 8.26436 9.89431 8.51872 9.70677 8.70625C9.51923 8.89379 9.26488 8.99915 8.99966 8.99915C8.73445 8.99915 8.48009 8.89379 8.29256 8.70625C8.10502 8.51872 7.99966 8.26436 7.99966 7.99915C7.99966 7.73393 8.10502 7.47958 8.29256 7.29204C8.48009 7.1045 8.73445 6.99915 8.99966 6.99915C9.26488 6.99915 9.51923 7.1045 9.70677 7.29204C9.89431 7.47958 9.99966 7.73393 9.99966 7.99915ZM6.99966 10.9991C6.99966 11.2644 6.89431 11.5187 6.70677 11.7063C6.51923 11.8938 6.26488 11.9991 5.99966 11.9991C5.73445 11.9991 5.48009 11.8938 5.29256 11.7063C5.10502 11.5187 4.99966 11.2644 4.99966 10.9991C4.99966 10.7339 5.10502 10.4796 5.29256 10.292C5.48009 10.1045 5.73445 9.99915 5.99966 9.99915C6.26488 9.99915 6.51923 10.1045 6.70677 10.292C6.89431 10.4796 6.99966 10.7339 6.99966 10.9991ZM9.99966 10.9991C9.99966 11.2644 9.89431 11.5187 9.70677 11.7063C9.51923 11.8938 9.26488 11.9991 8.99966 11.9991C8.73445 11.9991 8.48009 11.8938 8.29256 11.7063C8.10502 11.5187 7.99966 11.2644 7.99966 10.9991C7.99966 10.7339 8.10502 10.4796 8.29256 10.292C8.48009 10.1045 8.73445 9.99915 8.99966 9.99915C9.26488 9.99915 9.51923 10.1045 9.70677 10.292C9.89431 10.4796 9.99966 10.7339 9.99966 10.9991ZM6.99966 13.9991C6.99966 14.2644 6.89431 14.5187 6.70677 14.7063C6.51923 14.8938 6.26488 14.9991 5.99966 14.9991C5.73445 14.9991 5.48009 14.8938 5.29256 14.7063C5.10502 14.5187 4.99966 14.2644 4.99966 13.9991C4.99966 13.7339 5.10502 13.4796 5.29256 13.292C5.48009 13.1045 5.73445 12.9991 5.99966 12.9991C6.26488 12.9991 6.51923 13.1045 6.70677 13.292C6.89431 13.4796 6.99966 13.7339 6.99966 13.9991ZM9.99966 13.9991C9.99966 14.2644 9.89431 14.5187 9.70677 14.7063C9.51923 14.8938 9.26488 14.9991 8.99966 14.9991C8.73445 14.9991 8.48009 14.8938 8.29256 14.7063C8.10502 14.5187 7.99966 14.2644 7.99966 13.9991C7.99966 13.7339 8.10502 13.4796 8.29256 13.292C8.48009 13.1045 8.73445 12.9991 8.99966 12.9991C9.26488 12.9991 9.51923 13.1045 9.70677 13.292C9.89431 13.4796 9.99966 13.7339 9.99966 13.9991Z" fill="#6C757D"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_1695_36498">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg></td>
+            <td>Title</td>
+            <td>Title</td>
+            <td>Title</td>
+            <td class="d-flex text-primary">
+              <div class="mr-auto">Publish&nbsp;&nbsp;&nbsp;</div>
+              <div class="mr-auto">Edit&nbsp;&nbsp;&nbsp;</div>
+              <div class="mr-auto">Delete</div>
+          </td>
+          </tr>
+          <tr>
+            <th scope="row"><input type="checkbox"></th>
+            <td><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1695_36498)">
+                <rect width="16" height="16" fill="white" fill-opacity="0.01"/>
+                <path d="M6.99966 1.99915C6.99966 2.26436 6.89431 2.51872 6.70677 2.70625C6.51923 2.89379 6.26488 2.99915 5.99966 2.99915C5.73445 2.99915 5.48009 2.89379 5.29256 2.70625C5.10502 2.51872 4.99966 2.26436 4.99966 1.99915C4.99966 1.73393 5.10502 1.47958 5.29256 1.29204C5.48009 1.1045 5.73445 0.999146 5.99966 0.999146C6.26488 0.999146 6.51923 1.1045 6.70677 1.29204C6.89431 1.47958 6.99966 1.73393 6.99966 1.99915ZM9.99966 1.99915C9.99966 2.26436 9.89431 2.51872 9.70677 2.70625C9.51923 2.89379 9.26488 2.99915 8.99966 2.99915C8.73445 2.99915 8.48009 2.89379 8.29256 2.70625C8.10502 2.51872 7.99966 2.26436 7.99966 1.99915C7.99966 1.73393 8.10502 1.47958 8.29256 1.29204C8.48009 1.1045 8.73445 0.999146 8.99966 0.999146C9.26488 0.999146 9.51923 1.1045 9.70677 1.29204C9.89431 1.47958 9.99966 1.73393 9.99966 1.99915ZM6.99966 4.99915C6.99966 5.26436 6.89431 5.51872 6.70677 5.70625C6.51923 5.89379 6.26488 5.99915 5.99966 5.99915C5.73445 5.99915 5.48009 5.89379 5.29256 5.70625C5.10502 5.51872 4.99966 5.26436 4.99966 4.99915C4.99966 4.73393 5.10502 4.47958 5.29256 4.29204C5.48009 4.1045 5.73445 3.99915 5.99966 3.99915C6.26488 3.99915 6.51923 4.1045 6.70677 4.29204C6.89431 4.47958 6.99966 4.73393 6.99966 4.99915ZM9.99966 4.99915C9.99966 5.26436 9.89431 5.51872 9.70677 5.70625C9.51923 5.89379 9.26488 5.99915 8.99966 5.99915C8.73445 5.99915 8.48009 5.89379 8.29256 5.70625C8.10502 5.51872 7.99966 5.26436 7.99966 4.99915C7.99966 4.73393 8.10502 4.47958 8.29256 4.29204C8.48009 4.1045 8.73445 3.99915 8.99966 3.99915C9.26488 3.99915 9.51923 4.1045 9.70677 4.29204C9.89431 4.47958 9.99966 4.73393 9.99966 4.99915ZM6.99966 7.99915C6.99966 8.26436 6.89431 8.51872 6.70677 8.70625C6.51923 8.89379 6.26488 8.99915 5.99966 8.99915C5.73445 8.99915 5.48009 8.89379 5.29256 8.70625C5.10502 8.51872 4.99966 8.26436 4.99966 7.99915C4.99966 7.73393 5.10502 7.47958 5.29256 7.29204C5.48009 7.1045 5.73445 6.99915 5.99966 6.99915C6.26488 6.99915 6.51923 7.1045 6.70677 7.29204C6.89431 7.47958 6.99966 7.73393 6.99966 7.99915ZM9.99966 7.99915C9.99966 8.26436 9.89431 8.51872 9.70677 8.70625C9.51923 8.89379 9.26488 8.99915 8.99966 8.99915C8.73445 8.99915 8.48009 8.89379 8.29256 8.70625C8.10502 8.51872 7.99966 8.26436 7.99966 7.99915C7.99966 7.73393 8.10502 7.47958 8.29256 7.29204C8.48009 7.1045 8.73445 6.99915 8.99966 6.99915C9.26488 6.99915 9.51923 7.1045 9.70677 7.29204C9.89431 7.47958 9.99966 7.73393 9.99966 7.99915ZM6.99966 10.9991C6.99966 11.2644 6.89431 11.5187 6.70677 11.7063C6.51923 11.8938 6.26488 11.9991 5.99966 11.9991C5.73445 11.9991 5.48009 11.8938 5.29256 11.7063C5.10502 11.5187 4.99966 11.2644 4.99966 10.9991C4.99966 10.7339 5.10502 10.4796 5.29256 10.292C5.48009 10.1045 5.73445 9.99915 5.99966 9.99915C6.26488 9.99915 6.51923 10.1045 6.70677 10.292C6.89431 10.4796 6.99966 10.7339 6.99966 10.9991ZM9.99966 10.9991C9.99966 11.2644 9.89431 11.5187 9.70677 11.7063C9.51923 11.8938 9.26488 11.9991 8.99966 11.9991C8.73445 11.9991 8.48009 11.8938 8.29256 11.7063C8.10502 11.5187 7.99966 11.2644 7.99966 10.9991C7.99966 10.7339 8.10502 10.4796 8.29256 10.292C8.48009 10.1045 8.73445 9.99915 8.99966 9.99915C9.26488 9.99915 9.51923 10.1045 9.70677 10.292C9.89431 10.4796 9.99966 10.7339 9.99966 10.9991ZM6.99966 13.9991C6.99966 14.2644 6.89431 14.5187 6.70677 14.7063C6.51923 14.8938 6.26488 14.9991 5.99966 14.9991C5.73445 14.9991 5.48009 14.8938 5.29256 14.7063C5.10502 14.5187 4.99966 14.2644 4.99966 13.9991C4.99966 13.7339 5.10502 13.4796 5.29256 13.292C5.48009 13.1045 5.73445 12.9991 5.99966 12.9991C6.26488 12.9991 6.51923 13.1045 6.70677 13.292C6.89431 13.4796 6.99966 13.7339 6.99966 13.9991ZM9.99966 13.9991C9.99966 14.2644 9.89431 14.5187 9.70677 14.7063C9.51923 14.8938 9.26488 14.9991 8.99966 14.9991C8.73445 14.9991 8.48009 14.8938 8.29256 14.7063C8.10502 14.5187 7.99966 14.2644 7.99966 13.9991C7.99966 13.7339 8.10502 13.4796 8.29256 13.292C8.48009 13.1045 8.73445 12.9991 8.99966 12.9991C9.26488 12.9991 9.51923 13.1045 9.70677 13.292C9.89431 13.4796 9.99966 13.7339 9.99966 13.9991Z" fill="#6C757D"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_1695_36498">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg></td>
+            <td>Title</td>
+            <td>Title</td>
+            <td>Title</td>
+            <td class="d-flex text-primary">
+              <div class="mr-auto">Publish&nbsp;&nbsp;&nbsp;</div>
+              <div class="mr-auto">Edit&nbsp;&nbsp;&nbsp;</div>
+              <div class="mr-auto">Delete</div>
+          </td>
+          </tr>
+          <tr>
+            <th scope="row"><input type="checkbox"></th>
+            <td><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1695_36498)">
+                <rect width="16" height="16" fill="white" fill-opacity="0.01"/>
+                <path d="M6.99966 1.99915C6.99966 2.26436 6.89431 2.51872 6.70677 2.70625C6.51923 2.89379 6.26488 2.99915 5.99966 2.99915C5.73445 2.99915 5.48009 2.89379 5.29256 2.70625C5.10502 2.51872 4.99966 2.26436 4.99966 1.99915C4.99966 1.73393 5.10502 1.47958 5.29256 1.29204C5.48009 1.1045 5.73445 0.999146 5.99966 0.999146C6.26488 0.999146 6.51923 1.1045 6.70677 1.29204C6.89431 1.47958 6.99966 1.73393 6.99966 1.99915ZM9.99966 1.99915C9.99966 2.26436 9.89431 2.51872 9.70677 2.70625C9.51923 2.89379 9.26488 2.99915 8.99966 2.99915C8.73445 2.99915 8.48009 2.89379 8.29256 2.70625C8.10502 2.51872 7.99966 2.26436 7.99966 1.99915C7.99966 1.73393 8.10502 1.47958 8.29256 1.29204C8.48009 1.1045 8.73445 0.999146 8.99966 0.999146C9.26488 0.999146 9.51923 1.1045 9.70677 1.29204C9.89431 1.47958 9.99966 1.73393 9.99966 1.99915ZM6.99966 4.99915C6.99966 5.26436 6.89431 5.51872 6.70677 5.70625C6.51923 5.89379 6.26488 5.99915 5.99966 5.99915C5.73445 5.99915 5.48009 5.89379 5.29256 5.70625C5.10502 5.51872 4.99966 5.26436 4.99966 4.99915C4.99966 4.73393 5.10502 4.47958 5.29256 4.29204C5.48009 4.1045 5.73445 3.99915 5.99966 3.99915C6.26488 3.99915 6.51923 4.1045 6.70677 4.29204C6.89431 4.47958 6.99966 4.73393 6.99966 4.99915ZM9.99966 4.99915C9.99966 5.26436 9.89431 5.51872 9.70677 5.70625C9.51923 5.89379 9.26488 5.99915 8.99966 5.99915C8.73445 5.99915 8.48009 5.89379 8.29256 5.70625C8.10502 5.51872 7.99966 5.26436 7.99966 4.99915C7.99966 4.73393 8.10502 4.47958 8.29256 4.29204C8.48009 4.1045 8.73445 3.99915 8.99966 3.99915C9.26488 3.99915 9.51923 4.1045 9.70677 4.29204C9.89431 4.47958 9.99966 4.73393 9.99966 4.99915ZM6.99966 7.99915C6.99966 8.26436 6.89431 8.51872 6.70677 8.70625C6.51923 8.89379 6.26488 8.99915 5.99966 8.99915C5.73445 8.99915 5.48009 8.89379 5.29256 8.70625C5.10502 8.51872 4.99966 8.26436 4.99966 7.99915C4.99966 7.73393 5.10502 7.47958 5.29256 7.29204C5.48009 7.1045 5.73445 6.99915 5.99966 6.99915C6.26488 6.99915 6.51923 7.1045 6.70677 7.29204C6.89431 7.47958 6.99966 7.73393 6.99966 7.99915ZM9.99966 7.99915C9.99966 8.26436 9.89431 8.51872 9.70677 8.70625C9.51923 8.89379 9.26488 8.99915 8.99966 8.99915C8.73445 8.99915 8.48009 8.89379 8.29256 8.70625C8.10502 8.51872 7.99966 8.26436 7.99966 7.99915C7.99966 7.73393 8.10502 7.47958 8.29256 7.29204C8.48009 7.1045 8.73445 6.99915 8.99966 6.99915C9.26488 6.99915 9.51923 7.1045 9.70677 7.29204C9.89431 7.47958 9.99966 7.73393 9.99966 7.99915ZM6.99966 10.9991C6.99966 11.2644 6.89431 11.5187 6.70677 11.7063C6.51923 11.8938 6.26488 11.9991 5.99966 11.9991C5.73445 11.9991 5.48009 11.8938 5.29256 11.7063C5.10502 11.5187 4.99966 11.2644 4.99966 10.9991C4.99966 10.7339 5.10502 10.4796 5.29256 10.292C5.48009 10.1045 5.73445 9.99915 5.99966 9.99915C6.26488 9.99915 6.51923 10.1045 6.70677 10.292C6.89431 10.4796 6.99966 10.7339 6.99966 10.9991ZM9.99966 10.9991C9.99966 11.2644 9.89431 11.5187 9.70677 11.7063C9.51923 11.8938 9.26488 11.9991 8.99966 11.9991C8.73445 11.9991 8.48009 11.8938 8.29256 11.7063C8.10502 11.5187 7.99966 11.2644 7.99966 10.9991C7.99966 10.7339 8.10502 10.4796 8.29256 10.292C8.48009 10.1045 8.73445 9.99915 8.99966 9.99915C9.26488 9.99915 9.51923 10.1045 9.70677 10.292C9.89431 10.4796 9.99966 10.7339 9.99966 10.9991ZM6.99966 13.9991C6.99966 14.2644 6.89431 14.5187 6.70677 14.7063C6.51923 14.8938 6.26488 14.9991 5.99966 14.9991C5.73445 14.9991 5.48009 14.8938 5.29256 14.7063C5.10502 14.5187 4.99966 14.2644 4.99966 13.9991C4.99966 13.7339 5.10502 13.4796 5.29256 13.292C5.48009 13.1045 5.73445 12.9991 5.99966 12.9991C6.26488 12.9991 6.51923 13.1045 6.70677 13.292C6.89431 13.4796 6.99966 13.7339 6.99966 13.9991ZM9.99966 13.9991C9.99966 14.2644 9.89431 14.5187 9.70677 14.7063C9.51923 14.8938 9.26488 14.9991 8.99966 14.9991C8.73445 14.9991 8.48009 14.8938 8.29256 14.7063C8.10502 14.5187 7.99966 14.2644 7.99966 13.9991C7.99966 13.7339 8.10502 13.4796 8.29256 13.292C8.48009 13.1045 8.73445 12.9991 8.99966 12.9991C9.26488 12.9991 9.51923 13.1045 9.70677 13.292C9.89431 13.4796 9.99966 13.7339 9.99966 13.9991Z" fill="#6C757D"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_1695_36498">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg></td>
+            <td>Title</td>
+            <td>Title</td>
+            <td>Title</td>
+            <!-- <td><a href="#">Publish</a>
+              <a href="#">Edit</a>
+              <a href="#">Delete</a>
+            </td> -->
+            <td class="d-flex text-primary">
+              <div class="mr-auto">Publish&nbsp;&nbsp;&nbsp;</div>
+              <div class="mr-auto">Edit&nbsp;&nbsp;&nbsp;</div>
+              <div class="mr-auto">Delete</div>
+          </td>
+          </tr>
+          <tr>
+            <th scope="row"><input type="checkbox"></th>
+            <td><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1695_36498)">
+                <rect width="16" height="16" fill="white" fill-opacity="0.01"/>
+                <path d="M6.99966 1.99915C6.99966 2.26436 6.89431 2.51872 6.70677 2.70625C6.51923 2.89379 6.26488 2.99915 5.99966 2.99915C5.73445 2.99915 5.48009 2.89379 5.29256 2.70625C5.10502 2.51872 4.99966 2.26436 4.99966 1.99915C4.99966 1.73393 5.10502 1.47958 5.29256 1.29204C5.48009 1.1045 5.73445 0.999146 5.99966 0.999146C6.26488 0.999146 6.51923 1.1045 6.70677 1.29204C6.89431 1.47958 6.99966 1.73393 6.99966 1.99915ZM9.99966 1.99915C9.99966 2.26436 9.89431 2.51872 9.70677 2.70625C9.51923 2.89379 9.26488 2.99915 8.99966 2.99915C8.73445 2.99915 8.48009 2.89379 8.29256 2.70625C8.10502 2.51872 7.99966 2.26436 7.99966 1.99915C7.99966 1.73393 8.10502 1.47958 8.29256 1.29204C8.48009 1.1045 8.73445 0.999146 8.99966 0.999146C9.26488 0.999146 9.51923 1.1045 9.70677 1.29204C9.89431 1.47958 9.99966 1.73393 9.99966 1.99915ZM6.99966 4.99915C6.99966 5.26436 6.89431 5.51872 6.70677 5.70625C6.51923 5.89379 6.26488 5.99915 5.99966 5.99915C5.73445 5.99915 5.48009 5.89379 5.29256 5.70625C5.10502 5.51872 4.99966 5.26436 4.99966 4.99915C4.99966 4.73393 5.10502 4.47958 5.29256 4.29204C5.48009 4.1045 5.73445 3.99915 5.99966 3.99915C6.26488 3.99915 6.51923 4.1045 6.70677 4.29204C6.89431 4.47958 6.99966 4.73393 6.99966 4.99915ZM9.99966 4.99915C9.99966 5.26436 9.89431 5.51872 9.70677 5.70625C9.51923 5.89379 9.26488 5.99915 8.99966 5.99915C8.73445 5.99915 8.48009 5.89379 8.29256 5.70625C8.10502 5.51872 7.99966 5.26436 7.99966 4.99915C7.99966 4.73393 8.10502 4.47958 8.29256 4.29204C8.48009 4.1045 8.73445 3.99915 8.99966 3.99915C9.26488 3.99915 9.51923 4.1045 9.70677 4.29204C9.89431 4.47958 9.99966 4.73393 9.99966 4.99915ZM6.99966 7.99915C6.99966 8.26436 6.89431 8.51872 6.70677 8.70625C6.51923 8.89379 6.26488 8.99915 5.99966 8.99915C5.73445 8.99915 5.48009 8.89379 5.29256 8.70625C5.10502 8.51872 4.99966 8.26436 4.99966 7.99915C4.99966 7.73393 5.10502 7.47958 5.29256 7.29204C5.48009 7.1045 5.73445 6.99915 5.99966 6.99915C6.26488 6.99915 6.51923 7.1045 6.70677 7.29204C6.89431 7.47958 6.99966 7.73393 6.99966 7.99915ZM9.99966 7.99915C9.99966 8.26436 9.89431 8.51872 9.70677 8.70625C9.51923 8.89379 9.26488 8.99915 8.99966 8.99915C8.73445 8.99915 8.48009 8.89379 8.29256 8.70625C8.10502 8.51872 7.99966 8.26436 7.99966 7.99915C7.99966 7.73393 8.10502 7.47958 8.29256 7.29204C8.48009 7.1045 8.73445 6.99915 8.99966 6.99915C9.26488 6.99915 9.51923 7.1045 9.70677 7.29204C9.89431 7.47958 9.99966 7.73393 9.99966 7.99915ZM6.99966 10.9991C6.99966 11.2644 6.89431 11.5187 6.70677 11.7063C6.51923 11.8938 6.26488 11.9991 5.99966 11.9991C5.73445 11.9991 5.48009 11.8938 5.29256 11.7063C5.10502 11.5187 4.99966 11.2644 4.99966 10.9991C4.99966 10.7339 5.10502 10.4796 5.29256 10.292C5.48009 10.1045 5.73445 9.99915 5.99966 9.99915C6.26488 9.99915 6.51923 10.1045 6.70677 10.292C6.89431 10.4796 6.99966 10.7339 6.99966 10.9991ZM9.99966 10.9991C9.99966 11.2644 9.89431 11.5187 9.70677 11.7063C9.51923 11.8938 9.26488 11.9991 8.99966 11.9991C8.73445 11.9991 8.48009 11.8938 8.29256 11.7063C8.10502 11.5187 7.99966 11.2644 7.99966 10.9991C7.99966 10.7339 8.10502 10.4796 8.29256 10.292C8.48009 10.1045 8.73445 9.99915 8.99966 9.99915C9.26488 9.99915 9.51923 10.1045 9.70677 10.292C9.89431 10.4796 9.99966 10.7339 9.99966 10.9991ZM6.99966 13.9991C6.99966 14.2644 6.89431 14.5187 6.70677 14.7063C6.51923 14.8938 6.26488 14.9991 5.99966 14.9991C5.73445 14.9991 5.48009 14.8938 5.29256 14.7063C5.10502 14.5187 4.99966 14.2644 4.99966 13.9991C4.99966 13.7339 5.10502 13.4796 5.29256 13.292C5.48009 13.1045 5.73445 12.9991 5.99966 12.9991C6.26488 12.9991 6.51923 13.1045 6.70677 13.292C6.89431 13.4796 6.99966 13.7339 6.99966 13.9991ZM9.99966 13.9991C9.99966 14.2644 9.89431 14.5187 9.70677 14.7063C9.51923 14.8938 9.26488 14.9991 8.99966 14.9991C8.73445 14.9991 8.48009 14.8938 8.29256 14.7063C8.10502 14.5187 7.99966 14.2644 7.99966 13.9991C7.99966 13.7339 8.10502 13.4796 8.29256 13.292C8.48009 13.1045 8.73445 12.9991 8.99966 12.9991C9.26488 12.9991 9.51923 13.1045 9.70677 13.292C9.89431 13.4796 9.99966 13.7339 9.99966 13.9991Z" fill="#6C757D"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_1695_36498">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg></td>
+            <td>Title</td>
+            <td>Title</td>
+            <td>Title</td>
+            <td class="d-flex text-primary">
+              <div class="mr-auto">Publish&nbsp;&nbsp;&nbsp;</div>
+              <div class="mr-auto">Edit&nbsp;&nbsp;&nbsp;</div>
+              <div class="mr-auto">Delete</div>
+          </td>
+          </tr>
+          <tr>
+            <th scope="row"><input type="checkbox"></th>
+            <td><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1695_36498)">
+                <rect width="16" height="16" fill="white" fill-opacity="0.01"/>
+                <path d="M6.99966 1.99915C6.99966 2.26436 6.89431 2.51872 6.70677 2.70625C6.51923 2.89379 6.26488 2.99915 5.99966 2.99915C5.73445 2.99915 5.48009 2.89379 5.29256 2.70625C5.10502 2.51872 4.99966 2.26436 4.99966 1.99915C4.99966 1.73393 5.10502 1.47958 5.29256 1.29204C5.48009 1.1045 5.73445 0.999146 5.99966 0.999146C6.26488 0.999146 6.51923 1.1045 6.70677 1.29204C6.89431 1.47958 6.99966 1.73393 6.99966 1.99915ZM9.99966 1.99915C9.99966 2.26436 9.89431 2.51872 9.70677 2.70625C9.51923 2.89379 9.26488 2.99915 8.99966 2.99915C8.73445 2.99915 8.48009 2.89379 8.29256 2.70625C8.10502 2.51872 7.99966 2.26436 7.99966 1.99915C7.99966 1.73393 8.10502 1.47958 8.29256 1.29204C8.48009 1.1045 8.73445 0.999146 8.99966 0.999146C9.26488 0.999146 9.51923 1.1045 9.70677 1.29204C9.89431 1.47958 9.99966 1.73393 9.99966 1.99915ZM6.99966 4.99915C6.99966 5.26436 6.89431 5.51872 6.70677 5.70625C6.51923 5.89379 6.26488 5.99915 5.99966 5.99915C5.73445 5.99915 5.48009 5.89379 5.29256 5.70625C5.10502 5.51872 4.99966 5.26436 4.99966 4.99915C4.99966 4.73393 5.10502 4.47958 5.29256 4.29204C5.48009 4.1045 5.73445 3.99915 5.99966 3.99915C6.26488 3.99915 6.51923 4.1045 6.70677 4.29204C6.89431 4.47958 6.99966 4.73393 6.99966 4.99915ZM9.99966 4.99915C9.99966 5.26436 9.89431 5.51872 9.70677 5.70625C9.51923 5.89379 9.26488 5.99915 8.99966 5.99915C8.73445 5.99915 8.48009 5.89379 8.29256 5.70625C8.10502 5.51872 7.99966 5.26436 7.99966 4.99915C7.99966 4.73393 8.10502 4.47958 8.29256 4.29204C8.48009 4.1045 8.73445 3.99915 8.99966 3.99915C9.26488 3.99915 9.51923 4.1045 9.70677 4.29204C9.89431 4.47958 9.99966 4.73393 9.99966 4.99915ZM6.99966 7.99915C6.99966 8.26436 6.89431 8.51872 6.70677 8.70625C6.51923 8.89379 6.26488 8.99915 5.99966 8.99915C5.73445 8.99915 5.48009 8.89379 5.29256 8.70625C5.10502 8.51872 4.99966 8.26436 4.99966 7.99915C4.99966 7.73393 5.10502 7.47958 5.29256 7.29204C5.48009 7.1045 5.73445 6.99915 5.99966 6.99915C6.26488 6.99915 6.51923 7.1045 6.70677 7.29204C6.89431 7.47958 6.99966 7.73393 6.99966 7.99915ZM9.99966 7.99915C9.99966 8.26436 9.89431 8.51872 9.70677 8.70625C9.51923 8.89379 9.26488 8.99915 8.99966 8.99915C8.73445 8.99915 8.48009 8.89379 8.29256 8.70625C8.10502 8.51872 7.99966 8.26436 7.99966 7.99915C7.99966 7.73393 8.10502 7.47958 8.29256 7.29204C8.48009 7.1045 8.73445 6.99915 8.99966 6.99915C9.26488 6.99915 9.51923 7.1045 9.70677 7.29204C9.89431 7.47958 9.99966 7.73393 9.99966 7.99915ZM6.99966 10.9991C6.99966 11.2644 6.89431 11.5187 6.70677 11.7063C6.51923 11.8938 6.26488 11.9991 5.99966 11.9991C5.73445 11.9991 5.48009 11.8938 5.29256 11.7063C5.10502 11.5187 4.99966 11.2644 4.99966 10.9991C4.99966 10.7339 5.10502 10.4796 5.29256 10.292C5.48009 10.1045 5.73445 9.99915 5.99966 9.99915C6.26488 9.99915 6.51923 10.1045 6.70677 10.292C6.89431 10.4796 6.99966 10.7339 6.99966 10.9991ZM9.99966 10.9991C9.99966 11.2644 9.89431 11.5187 9.70677 11.7063C9.51923 11.8938 9.26488 11.9991 8.99966 11.9991C8.73445 11.9991 8.48009 11.8938 8.29256 11.7063C8.10502 11.5187 7.99966 11.2644 7.99966 10.9991C7.99966 10.7339 8.10502 10.4796 8.29256 10.292C8.48009 10.1045 8.73445 9.99915 8.99966 9.99915C9.26488 9.99915 9.51923 10.1045 9.70677 10.292C9.89431 10.4796 9.99966 10.7339 9.99966 10.9991ZM6.99966 13.9991C6.99966 14.2644 6.89431 14.5187 6.70677 14.7063C6.51923 14.8938 6.26488 14.9991 5.99966 14.9991C5.73445 14.9991 5.48009 14.8938 5.29256 14.7063C5.10502 14.5187 4.99966 14.2644 4.99966 13.9991C4.99966 13.7339 5.10502 13.4796 5.29256 13.292C5.48009 13.1045 5.73445 12.9991 5.99966 12.9991C6.26488 12.9991 6.51923 13.1045 6.70677 13.292C6.89431 13.4796 6.99966 13.7339 6.99966 13.9991ZM9.99966 13.9991C9.99966 14.2644 9.89431 14.5187 9.70677 14.7063C9.51923 14.8938 9.26488 14.9991 8.99966 14.9991C8.73445 14.9991 8.48009 14.8938 8.29256 14.7063C8.10502 14.5187 7.99966 14.2644 7.99966 13.9991C7.99966 13.7339 8.10502 13.4796 8.29256 13.292C8.48009 13.1045 8.73445 12.9991 8.99966 12.9991C9.26488 12.9991 9.51923 13.1045 9.70677 13.292C9.89431 13.4796 9.99966 13.7339 9.99966 13.9991Z" fill="#6C757D"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_1695_36498">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg></td>
+            <td>Title</td>
+            <td>Title</td>
+            <td>Title</td>
+            <td class="d-flex text-primary">
+              <div class="mr-auto">Publish&nbsp;&nbsp;&nbsp;</div>
+              <div class="mr-auto">Edit&nbsp;&nbsp;&nbsp;</div>
+              <div class="mr-auto">Delete</div>
+          </td>
+          </tr>
+          <tr>
+            <th scope="row"><input type="checkbox"></th>
+            <td><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1695_36498)">
+                <rect width="16" height="16" fill="white" fill-opacity="0.01"/>
+                <path d="M6.99966 1.99915C6.99966 2.26436 6.89431 2.51872 6.70677 2.70625C6.51923 2.89379 6.26488 2.99915 5.99966 2.99915C5.73445 2.99915 5.48009 2.89379 5.29256 2.70625C5.10502 2.51872 4.99966 2.26436 4.99966 1.99915C4.99966 1.73393 5.10502 1.47958 5.29256 1.29204C5.48009 1.1045 5.73445 0.999146 5.99966 0.999146C6.26488 0.999146 6.51923 1.1045 6.70677 1.29204C6.89431 1.47958 6.99966 1.73393 6.99966 1.99915ZM9.99966 1.99915C9.99966 2.26436 9.89431 2.51872 9.70677 2.70625C9.51923 2.89379 9.26488 2.99915 8.99966 2.99915C8.73445 2.99915 8.48009 2.89379 8.29256 2.70625C8.10502 2.51872 7.99966 2.26436 7.99966 1.99915C7.99966 1.73393 8.10502 1.47958 8.29256 1.29204C8.48009 1.1045 8.73445 0.999146 8.99966 0.999146C9.26488 0.999146 9.51923 1.1045 9.70677 1.29204C9.89431 1.47958 9.99966 1.73393 9.99966 1.99915ZM6.99966 4.99915C6.99966 5.26436 6.89431 5.51872 6.70677 5.70625C6.51923 5.89379 6.26488 5.99915 5.99966 5.99915C5.73445 5.99915 5.48009 5.89379 5.29256 5.70625C5.10502 5.51872 4.99966 5.26436 4.99966 4.99915C4.99966 4.73393 5.10502 4.47958 5.29256 4.29204C5.48009 4.1045 5.73445 3.99915 5.99966 3.99915C6.26488 3.99915 6.51923 4.1045 6.70677 4.29204C6.89431 4.47958 6.99966 4.73393 6.99966 4.99915ZM9.99966 4.99915C9.99966 5.26436 9.89431 5.51872 9.70677 5.70625C9.51923 5.89379 9.26488 5.99915 8.99966 5.99915C8.73445 5.99915 8.48009 5.89379 8.29256 5.70625C8.10502 5.51872 7.99966 5.26436 7.99966 4.99915C7.99966 4.73393 8.10502 4.47958 8.29256 4.29204C8.48009 4.1045 8.73445 3.99915 8.99966 3.99915C9.26488 3.99915 9.51923 4.1045 9.70677 4.29204C9.89431 4.47958 9.99966 4.73393 9.99966 4.99915ZM6.99966 7.99915C6.99966 8.26436 6.89431 8.51872 6.70677 8.70625C6.51923 8.89379 6.26488 8.99915 5.99966 8.99915C5.73445 8.99915 5.48009 8.89379 5.29256 8.70625C5.10502 8.51872 4.99966 8.26436 4.99966 7.99915C4.99966 7.73393 5.10502 7.47958 5.29256 7.29204C5.48009 7.1045 5.73445 6.99915 5.99966 6.99915C6.26488 6.99915 6.51923 7.1045 6.70677 7.29204C6.89431 7.47958 6.99966 7.73393 6.99966 7.99915ZM9.99966 7.99915C9.99966 8.26436 9.89431 8.51872 9.70677 8.70625C9.51923 8.89379 9.26488 8.99915 8.99966 8.99915C8.73445 8.99915 8.48009 8.89379 8.29256 8.70625C8.10502 8.51872 7.99966 8.26436 7.99966 7.99915C7.99966 7.73393 8.10502 7.47958 8.29256 7.29204C8.48009 7.1045 8.73445 6.99915 8.99966 6.99915C9.26488 6.99915 9.51923 7.1045 9.70677 7.29204C9.89431 7.47958 9.99966 7.73393 9.99966 7.99915ZM6.99966 10.9991C6.99966 11.2644 6.89431 11.5187 6.70677 11.7063C6.51923 11.8938 6.26488 11.9991 5.99966 11.9991C5.73445 11.9991 5.48009 11.8938 5.29256 11.7063C5.10502 11.5187 4.99966 11.2644 4.99966 10.9991C4.99966 10.7339 5.10502 10.4796 5.29256 10.292C5.48009 10.1045 5.73445 9.99915 5.99966 9.99915C6.26488 9.99915 6.51923 10.1045 6.70677 10.292C6.89431 10.4796 6.99966 10.7339 6.99966 10.9991ZM9.99966 10.9991C9.99966 11.2644 9.89431 11.5187 9.70677 11.7063C9.51923 11.8938 9.26488 11.9991 8.99966 11.9991C8.73445 11.9991 8.48009 11.8938 8.29256 11.7063C8.10502 11.5187 7.99966 11.2644 7.99966 10.9991C7.99966 10.7339 8.10502 10.4796 8.29256 10.292C8.48009 10.1045 8.73445 9.99915 8.99966 9.99915C9.26488 9.99915 9.51923 10.1045 9.70677 10.292C9.89431 10.4796 9.99966 10.7339 9.99966 10.9991ZM6.99966 13.9991C6.99966 14.2644 6.89431 14.5187 6.70677 14.7063C6.51923 14.8938 6.26488 14.9991 5.99966 14.9991C5.73445 14.9991 5.48009 14.8938 5.29256 14.7063C5.10502 14.5187 4.99966 14.2644 4.99966 13.9991C4.99966 13.7339 5.10502 13.4796 5.29256 13.292C5.48009 13.1045 5.73445 12.9991 5.99966 12.9991C6.26488 12.9991 6.51923 13.1045 6.70677 13.292C6.89431 13.4796 6.99966 13.7339 6.99966 13.9991ZM9.99966 13.9991C9.99966 14.2644 9.89431 14.5187 9.70677 14.7063C9.51923 14.8938 9.26488 14.9991 8.99966 14.9991C8.73445 14.9991 8.48009 14.8938 8.29256 14.7063C8.10502 14.5187 7.99966 14.2644 7.99966 13.9991C7.99966 13.7339 8.10502 13.4796 8.29256 13.292C8.48009 13.1045 8.73445 12.9991 8.99966 12.9991C9.26488 12.9991 9.51923 13.1045 9.70677 13.292C9.89431 13.4796 9.99966 13.7339 9.99966 13.9991Z" fill="#6C757D"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_1695_36498">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg></td>
+            <td>Title</td>
+            <td>Title</td>
+            <td>Title</td>
+            <td class="d-flex text-primary">
+                <div class="mr-auto">Publish&nbsp;&nbsp;&nbsp;</div>
+                <div class="mr-auto">Edit&nbsp;&nbsp;&nbsp;</div>
+                <div class="mr-auto">Delete</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+  <!-- Table Section end -->
+
+  <!-- Form Section start -->
+  <section class="form mt-4">
+      <div class="container-fluid">
+          <form>
+              <fieldset>
+                  <legend><b>Bootstrap Form</legend></b>
+                  <div class="row">
+                      <div class="col-md-6 mb-3">
+                          <input type="text" aria-label="First name" class="form-control" placeholder="First Name">
+                      </div>
+                      <div class="col-md-6 mb-3">
+                          <input type="text" aria-label="Last name" class="form-control" placeholder="Last Name">
+                      </div>
+                      <div class="mb-3">
+                          <input type="email" class="form-control" placeholder="Email">
+                      </div>
+                      <div class="mb-3">
+                          <input type="password" class="form-control" placeholder="Password">
+                      </div>
+                      <div class="mb-3">
+                          <input type="password" class="form-control" placeholder="Confirm Password">
+                      </div>
+                  </div>                  
+                  <button type="submit" class="btn btn-primary">Submit Form</button>
+              </fieldset>
+          </form>
+      </div>
+  </section>
+  <!-- Form Section end -->
+
+
+  <!-- Bootstrap Js CDN (Script) link -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous">
+  </script>
+</body>
+</html>
